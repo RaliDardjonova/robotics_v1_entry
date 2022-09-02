@@ -7,12 +7,13 @@ class Pixel:
         self.blue: int = blue
         self.alpha: int = alpha
 
-    def __str__ (self):
+    def __str__(self):
         return '(' + str(self.red) + ', ' + str(self.green) + ', ' + str(self.blue) + ', ' + str(self.alpha) + ')'
 
     def __eq__(self, other):
         return self.red == other.red and self.green == other.green and \
-            self.blue == other.blue and self.alpha == other.alpha
+               self.blue == other.blue and self.alpha == other.alpha
+
 
 def parse_pixel(dataRGBA: int) -> Pixel:
     red: int = (dataRGBA & 0xFF000000) >> 24
